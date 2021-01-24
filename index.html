@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Form Example 1</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <form onsubmit="return false">
+      
+        <!--Collect customer information-->
+      <div id="infoCollection">
+        <h1>Customer Information</h1>
+        
+        <!--Name-->
+        <label for="name"> Name:</label> 
+        <input name="name" id="name" placeholder="last name"/>
+        
+        <!--City-->
+        <label for="city">City:</label>
+        <input name="city" id="city" />
+        
+        <!--Options for payment information-->>
+        <label for="payment">Payment Preference:</label>
+        <select name="payment" id="payment">
+            <option value="cash">cash</option>
+            <option value="credit">VISA or MC</option>
+            <option value="debit">Debit Card</option>
+        </select>
+        
+        <!--Button for submitting information-->
+        <input type="submit" value="Submit" onclick="formSubmitEvent()">
+      
+    </div>
+
+      <br>
+      
+      <!--Display the list of customers-->
+      <div id="showList">
+        <h1>My Customers</h1>
+        <div id="customerList"></div>
+      </div>
+      
+    </form>
+    <!--Script-->
+    <script src="index.js"></script>
+  </body>
+</html>
